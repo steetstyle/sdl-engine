@@ -20,8 +20,8 @@ target_sources(test_webgpu PRIVATE
 
 target_link_libraries(test_webgpu PRIVATE 
     "${SDL_DIR}/build/linux/libSDL3.so"
-    "${WGPU_DIR}/target/debug/libwgpu_native.a"
-    -lpthread -ldl -lEGL -lvulkan -lglfw -lwayland-client -lwayland-cursor -lxkbcommon -lpng -lz -lm
+    "${WGPU_DIR}/target/release/libwgpu_native.a"
+    -lpthread -ldl -lEGL -lvulkan -lglfw -lwayland-client -lwayland-cursor -lxkbcommon -lz -lm
 )
 
 set_target_properties(test_webgpu PROPERTIES
