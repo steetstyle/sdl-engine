@@ -7,36 +7,39 @@ OSXCROSS_DIR="$SCRIPT_DIR/../../third_party/osxcross"
 
 echo "=== Setting up osxcross for macOS cross-compilation ==="
 
-if [ -d "$OSXCROSS_DIR" ]; then
-    echo "osxcross already exists at $OSXCROSS_DIR"
-    read -p "Reinstall? (y/n): " -n 1 -r
+# Check for macOS SDK in tarballs directory
+SDK_TARBALL=""
+for f in "$OSXCROSS_DIR"/tarballs/*.tar.*; do
+    if [ -f "$f" ]; then
+        SDK_TARBALL="$f"
+        break
+    fi
+done
+
+if [ -z "$SDK_TARBALL" ]; then
+    echo "Downloading macOS SDK..."
+    echo "Available SDKs: https://github.com/joseluisq/macosx-sdks/releases"
+    echo "Download a pre-packaged SDK and place it in $OSXCROSS_DIR/tarballs/"
+    exit 1
+fi
+
+echo "Found SDK: $SDK_TARBALL"
+
+if [ -d "$OSXCROSS_DIR/target" ]; then
+    echo "osxcross already built at $OSXCROSS_DIR/target"
+    read -p "Rebuild? (y/n): " -n 1 -r
     echo
     if [[ ! $REPLY =~ ^[Yy]$ ]]; then
         exit 0
     fi
-    rm -rf "$OSXCROSS_DIR"
+    rm -rf "$OSXCROSS_DIR/target" "$OSXCROSS_DIR/build"
 fi
-
-echo "Cloning osxcross..."
-git clone --depth 1 https://github.com/tpoechtrager/osxcross.git "$OSXCROSS_DIR"
 
 cd "$OSXCROSS_DIR"
 
-echo "Downloading macOS SDK..."
-echo "NOTE: You may need your Apple ID for SDK download"
-echo "If prompted, enter your Apple Developer credentials"
-echo ""
-read -p "Continue? (y/n): " -n 1 -r
-echo
-if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    exit 1
-fi
-
-./tools/getSdk.py
-
 echo "Building osxcross..."
 unset MACOSX_DEPLOYMENT_TARGET
-OCPATH=$(pwd) ./build.sh
+echo "" | UNATTENDED=1 OCPATH=$(pwd) ./build.sh
 
 echo ""
 echo "=== Setup complete! ==="
@@ -48,5 +51,4 @@ echo "  export PATH=\"\$OSXCROSS_PATH/bin:\$PATH\""
 echo ""
 echo "Then run:"
 echo "  source ~/.bashrc  # or ~/.zshrc"
-echo "  cd tests/blue_screen/macos"
-echo "  ./build.sh"
+echo "  x86_64-apple-darwin24.5-clang++ --version"
