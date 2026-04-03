@@ -28,3 +28,17 @@ local.properties
 third_party/sdl/build/
 third_party/sdl/android/build/
 third_party/sdl/linux/build/
+
+# Test SDL headers (auto-generated)
+tests/blue_screen/macos/SDL3/
+tests/blue_screen/macos/SDL/
+
+tests/blue_screen/mac/SDL3/
+tests/blue_screen/mac/SDL/
+
+# Xcode derived data (contains build artifacts)
+DerivedData/
+
+# iOS provisioning (contains team/signing info)
+*.mobileprovision
+*.xcmprofile
