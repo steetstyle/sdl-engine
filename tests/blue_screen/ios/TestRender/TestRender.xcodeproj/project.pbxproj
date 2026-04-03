@@ -1,0 +1,341 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00E356F31AD99517003FC87E /* test_render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* test_render.cpp */; };
+		2A3788D42F80631D0024A30D /* SDL3.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1C94BF2B3C7A1D00000001 /* SDL3.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		8A1C94C12B3C7A1D00000001 /* SDL3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A1C94BF2B3C7A1D00000001 /* SDL3.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8A1C94C22B3C7A1D00000001 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2A3788D42F80631D0024A30D /* SDL3.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00E356F21AD99517003FC87E /* test_render.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test_render.cpp; sourceTree = "<group>"; };
+		8A1C94B12B3C7A1D00000001 /* TestRender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A1C94BF2B3C7A1D00000001 /* SDL3.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL3.framework; path = "/Users/furkanbostanci/Sites/sdl-engine/third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64/SDL3.framework"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A1C94B52B3C7A1D00000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A1C94C12B3C7A1D00000001 /* SDL3.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00E356EF1AD99517003FC87E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				00E356F21AD99517003FC87E /* test_render.cpp */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		8A1C94A12B3C7A1D00000000 = {
+			isa = PBXGroup;
+			children = (
+				00E356EF1AD99517003FC87E /* Source */,
+				8A1C94A32B3C7A1D00000000 /* Frameworks */,
+				8A1C94A42B3C7A1D00000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A1C94A32B3C7A1D00000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A1C94BF2B3C7A1D00000001 /* SDL3.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A1C94A42B3C7A1D00000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A1C94B12B3C7A1D00000001 /* TestRender.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A1C94B02B3C7A1D00000001 /* TestRender */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A1C94BC2B3C7A1D00000001 /* Build configuration list for PBXNativeTarget "TestRender" */;
+			buildPhases = (
+				8A1C94B32B3C7A1D00000001 /* Sources */,
+				8A1C94B52B3C7A1D00000001 /* Frameworks */,
+				8A1C94C22B3C7A1D00000001 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestRender;
+			productName = TestRender;
+			productReference = 8A1C94B12B3C7A1D00000001 /* TestRender.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A1C94A02B3C7A1D00000000 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					8A1C94B02B3C7A1D00000001 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 8A1C94AF2B3C7A1D00000001 /* Build configuration list for PBXProject "TestRender" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8A1C94A12B3C7A1D00000000;
+			productRefGroup = 8A1C94A42B3C7A1D00000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A1C94B02B3C7A1D00000001 /* TestRender */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A1C94B32B3C7A1D00000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00E356F31AD99517003FC87E /* test_render.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8A1C94B72B3C7A1D00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GBVGSRD85X;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8A1C94B82B3C7A1D00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GBVGSRD85X;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		8A1C94B92B3C7A1D00000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GBVGSRD85X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64/SDL3.framework/Headers",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/include",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Wl,-F,$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64",
+					"-Wl,-framework,SDL3",
+					"-Wl,-framework,CoreFoundation",
+					"-Wl,-framework,UIKit",
+					"-Wl,-framework,QuartzCore",
+					"-Wl,-framework,AudioToolbox",
+					"-Wl,-framework,CoreAudio",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.sdl.testrender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A1C94BA2B3C7A1D00000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = GBVGSRD85X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64/SDL3.framework/Headers",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/include",
+				);
+				INFOPLIST_FILE = Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Wl,-F,$(PROJECT_DIR)/../../../../third_party/sdl/Xcode/SDL/build/SDL3.xcframework/ios-arm64",
+					"-Wl,-framework,SDL3",
+					"-Wl,-framework,CoreFoundation",
+					"-Wl,-framework,UIKit",
+					"-Wl,-framework,QuartzCore",
+					"-Wl,-framework,AudioToolbox",
+					"-Wl,-framework,CoreAudio",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.sdl.testrender;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A1C94AF2B3C7A1D00000001 /* Build configuration list for PBXProject "TestRender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1C94B72B3C7A1D00000001 /* Debug */,
+				8A1C94B82B3C7A1D00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A1C94BC2B3C7A1D00000001 /* Build configuration list for PBXNativeTarget "TestRender" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A1C94B92B3C7A1D00000001 /* Debug */,
+				8A1C94BA2B3C7A1D00000001 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A1C94A02B3C7A1D00000000 /* Project object */;
+}

@@ -29,6 +29,9 @@ third_party/sdl/build/
 third_party/sdl/android/build/
 third_party/sdl/linux/build/
 
+# osxcross (cross-compilation toolchain)
+third_party/osxcross/
+
 # Test SDL headers (auto-generated)
 tests/blue_screen/macos/SDL3/
 tests/blue_screen/macos/SDL/
