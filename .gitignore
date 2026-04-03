@@ -1,0 +1,30 @@
+# Build artifacts
+*.o
+*.so
+*.a
+*.dylib
+test_render_*
+build/
+out/
+*.apk
+*.aab
+.cxx/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+local.properties
+
+# Third party builds
+third_party/sdl/build/
+third_party/sdl/android/build/
+third_party/sdl/linux/build/
