@@ -33,6 +33,7 @@ typedef struct {
     float alpha;
     int prevValue;
     float prevX, prevY;
+    int frozen;
 } Tile;
 
 typedef struct {
@@ -46,6 +47,13 @@ typedef struct {
     int won;
     float gameOverAlpha;
     int inputBlocked;
+    int multiplier;
+    int movesWithoutSpawn;
+    int undoCount;
+    int totalMoves;
+    int gamesPlayed;
+    int highScore;
+    int dailyStreak;
 } Game;
 
 static Uint32 tileBgColors[18] = {
