@@ -4,6 +4,10 @@
 #include <string.h>
 #include <time.h>
 
+#ifdef __ANDROID__
+#define SDL_WINDOW_FULLSCREEN 0x00000001
+#endif
+
 #define GRID_SIZE 8
 #define HALF_GRID 4
 #define CELL_COUNT 64
@@ -335,8 +339,23 @@ int main(int argc, char* argv[]) {
     
     if (!SDL_Init(SDL_INIT_VIDEO)) return 1;
     
-    SDL_Window* window = SDL_CreateWindow("Merge & Devour", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 800, 800, SDL_WINDOW_RESIZABLE);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, NULL, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
+    SDL_Window* window = NULL;
+#ifdef __ANDROID__
+    window = SDL_CreateWindow("Merge & Devour", 0, 0, SDL_WINDOW_FULLSCREEN);
+#else
+    window = SDL_CreateWindow("Merge & Devour", 800, 800, 0);
+#endif
+    if (!window) {
+        SDL_Quit();
+        return 1;
+    }
+    
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, NULL);
+    if (!renderer) {
+        SDL_DestroyWindow(window);
+        SDL_Quit();
+        return 1;
+    }
     
     srand((unsigned int)time(NULL));
     
@@ -455,7 +474,10 @@ int main(int argc, char* argv[]) {
                     initRound(&game);
                 }
             } else if (event.type == SDL_EVENT_WINDOW_RESIZED) {
-                SDL_GetRendererOutputSize(renderer, &game.screenW, &game.screenH);
+                int dw, dh;
+                SDL_GetRenderOutputSize(renderer, &dw, &dh);
+                game.screenW = dw;
+                game.screenH = dh;
             }
         }
         
